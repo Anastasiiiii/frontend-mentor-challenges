@@ -7,3 +7,17 @@ This is a solution to the [Simple Omelette Recipe](https://www.frontendmentor.io
 👉 View site on GitHub Pages(https://anastasiiiii.github.io/frontend-mentor-challenges/recipe-page/)
 
 ## 🎥 Demo GIF
+
+![](./assets/show-gif.gif)
+
+
+## 🛠️ Built with
+
+- Semantic **HTML5**
+- **CSS3** (flexbox)
+- **Responsive layout**
+- Custom styling without frameworks
+
+## 🙌 Acknowledgements
+
+Design by Frontend Mentor
