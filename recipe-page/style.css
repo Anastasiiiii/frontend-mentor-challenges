@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'Outfit';
+    src: url('../fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900; /* тому що це variable font */
+  }
+  
+@font-face {
+    font-family: 'Young Serif';
+    src: url('../fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+    font-weight: 500;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(30, 54%, 90%);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    color: hsl(30, 10%, 34%);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 29.5rem;
+    height: auto;
+    background-color: white;
+    border-radius: 0.6rem;
+    padding: 1.5rem;
+    margin: 3rem 0;
+}
+
+.main-container img {
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border-radius: 0.6rem;
+}
+
+.main-container h1 {
+    font-family: 'Young Serif', serif;
+    color: hsl(24, 5%, 18%);
+    margin-bottom: 0;
+}
+
+.main-container p{
+    font-size: 0.7rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.preparation-time-container{
+    width: 100%;
+    background-color: hsl(330, 100%, 98%);
+    border-radius: 0.6rem;
+}
+
+.preparation-time-container h5{
+    color: hsl(332, 51%, 32%);
+    margin: 1rem auto 0 1.8rem;
+}
+
+.preparation-time-container ul{
+    font-size: 0.7rem;
+    text-align: justify;
+    line-height: 1.5rem;
+}
+
+.preparation-time-container ul li{
+    padding-left: 0.7rem;
+}
+
+.recipe-container{
+    width: 100%;
+    border-bottom: 2px solid rgba(79, 69, 61, 0.1);
+    padding-bottom: 0.7rem;
+}
+
+.recipe-container h2{
+    font-family: 'Young Serif', serif;
+    color: hsl(14, 45%, 36%);
+}
+
+.recipe-container ul, ol{
+    font-size: 0.7rem;
+    line-height: 2.2;
+    margin-left: 0;
+    padding-left: 1rem;
+}
+
+.recipe-container ul li, ol li{
+    padding-left: 0.7rem;
+}
+
+.recipe-container ol li::marker {
+    font-weight: bold;
+}
+
+.recipe-container table{
+    width: 100%;
+    font-size: 0.8rem;
+    border-collapse: collapse;
+}
+
+.recipe-container table td{
+    padding: 0.7rem 1rem;
+}
+
+.recipe-container table tr:not(:last-child) td{
+    border-bottom: 1px solid rgba(79, 69, 61, 0.2);
+}
+
+.recipe-container table td:last-child{
+    font-weight: bold;
+    color: hsl(14, 45%, 36%);
+}
+
+#table-container{
+    border: none;
+}
