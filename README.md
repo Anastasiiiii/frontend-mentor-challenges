@@ -4,7 +4,7 @@ This repository contains my solutions to various challenges from [Frontend Mento
 
 ## 📋 Table with Demo Links
 
-| Name                      | Live Demo |
-|---------------------------|-----------|
-| Simple Omelette Recipe   | [View](https://anastasiiiii.github.io/frontend-mentor-challenges/recipe-page/) |
+| Name                     | Live Demo                                                                 | Source Folder                      |
+|--------------------------|---------------------------------------------------------------------------|------------------------------------|
+| Simple Omelette Recipe   | [View](https://anastasiiiii.github.io/frontend-mentor-challenges/recipe-page/) | [Source](https://github.com/Anastasiiiii/frontend-mentor-challenges/tree/main/recipe-page)
 
