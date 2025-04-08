@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Ultra&display=swap"
+        rel="stylesheet">
+    <title>Product preview card component</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="img-container">
+            <picture>
+                <source srcset="images/image-product-mobile.jpg" media="(max-width: 375px)">
+                <img src="images/image-product-desktop.jpg" alt="Product Image">
+            </picture>
+        </div>
+
+        <div class="text-container">
+            <div class="general-text">
+                <p id="perfume">PERFUME</p>
+                <h1>Gabrielle Essence Eau De Parfum</h1>
+                <p id="passage">
+                    A floral, solar and voluptuous interpretation composed by Oliver Polge, Perfumer-Creator for the
+                    House of
+                    CHANEL.
+                </p>
+            </div>
+            <div class="price-div">
+                <h1>$149.99</h1><span>
+                    <p><s>169.99</s></p>
+                </span>
+            </div>
+            <button>
+                <span><img src="./images/icon-cart.svg" /></span>
+                Add to Cart
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>

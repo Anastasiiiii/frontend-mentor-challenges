@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: hsl(30, 38%, 92%);
+}
+
+.main-container {
+    display: flex;
+    max-width: 600px;
+    background-color: white;
+    margin: 80px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.img-container,
+.text-container {
+    flex: 1;
+}
+
+.text-container h1,
+.text-container p,
+.text-container button {
+    margin: 0;
+}
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.general-text{
+    margin: 30px;
+}
+
+.price-div{
+    margin: 30px;
+}
+
+#perfume {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0.3rem;
+    color: hsl(228, 12%, 48%);
+    font-size: 0.7rem;
+}
+
+.general-text h1 {
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "SOFT" 0,
+        "WONK" 0;
+    color: hsl(212, 21%, 14%);  
+    margin-top: 20px;
+    line-height: 1;
+}
+
+.general-text p {
+    color: hsl(228, 12%, 48%);
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+#passage{
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.price-div {
+    display: flex;
+    gap: 20px;
+    margin-top: 0;
+}
+
+.price-div h1{
+    color: hsl(158, 36%, 37%);
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 0;
+}
+
+.price-div p{
+    color: hsl(228, 12%, 48%);
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.text-container button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    align-self: center; 
+    margin-top: auto; 
+    margin-bottom: 35px;
+    margin-top: 0;
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    border: none;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button span img {
+    margin-right: 10px; 
+    vertical-align: middle; 
+}
+
+button:hover{
+    background-color: hsl(158, 42%, 18%);
+}
+
+@media (max-width: 375px) {
+    .main-container{
+        flex-direction: column;
+    }
+}
