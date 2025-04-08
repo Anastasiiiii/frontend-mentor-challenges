@@ -1,4 +1,4 @@
-# Product Preview Card Component
+# 🛍️ Product Preview Card Component
 
 This is a solution to the [Frontend Mentor](https://www.frontendmentor.io/) challenge — **Product Preview Card Component**.
 
