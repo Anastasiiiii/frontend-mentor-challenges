@@ -6,5 +6,6 @@ This repository contains my solutions to various challenges from [Frontend Mento
 
 | Name                     | Live Demo                                                                 | Source Folder                      |
 |--------------------------|---------------------------------------------------------------------------|------------------------------------|
-| Simple Omelette Recipe   | [View](https://anastasiiiii.github.io/frontend-mentor-challenges/recipe-page/) | [Source](https://github.com/Anastasiiiii/frontend-mentor-challenges/tree/main/recipe-page)
+| Simple Omelette Recipe   | [View](https://anastasiiiii.github.io/frontend-mentor-challenges/recipe-page/) | [Source](https://github.com/Anastasiiiii/frontend-mentor-challenges/tree/main/recipe-page)|
+|Contact Form Challenge    | [View](https://anastasiiiii.github.io/frontend-mentor-challenges/contact-form/)| [Source](https://github.com/Anastasiiiii/frontend-mentor-challenges/tree/main/contact-form)|
 
