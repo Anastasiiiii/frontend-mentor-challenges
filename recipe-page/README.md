@@ -4,7 +4,7 @@ This is a solution to the [Simple Omelette Recipe](https://www.frontendmentor.io
 
 ## 🔗 Live Demo
 
-👉 View site on GitHub Pages(https://anastasiiiii.github.io/frontend-mentor-challenges/recipe-page/)
+👉 [View site on GitHub Pages](https://anastasiiiii.github.io/frontend-mentor-challenges/recipe-page/)
 
 ## 🎥 Demo GIF
 
