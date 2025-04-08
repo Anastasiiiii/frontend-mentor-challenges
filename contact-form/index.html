@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <h3>Contact Us</h3>
+        <form id="contact-form">
+            <div class="name-box">
+                <div>
+                    <label for="fname">First Name <span class="required">*</span></label>
+                    <input type="text" id="fname" name="fname">
+                </div>
+                <div>
+                    <label for="lname">Last Name <span class="required">*</span></label>
+                    <input type="text" id="lname" name="lname">
+                </div>
+            </div>
+            <div>
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div>
+                <label>Query Type <span class="required">*</span></label>
+                <div class="name-box" style="margin: 0;">
+                    <label class="radio-option">
+                        <input type="radio" name="query" value="general" />
+                        <span>General Enquiry</span>
+                    </label>
+
+                    <label class="radio-option">
+                        <input type="radio" name="query" value="support" />
+                        <span>Support Request</span>
+                    </label>
+                </div>
+            </div>
+            <div>
+                <label for="message">Message <span class="required">*</span></label>
+                <input type="text" id="message" name="message" style="height: 5rem;">
+            </div>
+            <div class="conception-box">
+                <input type="checkbox" id="conception" name="conception" />
+                <label for="conception">I concept to being contacted by the team <span class="required">*</span></label>
+            </div>
+
+            <button type="submit" id="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault(); // stop sending
+
+            // Clean previous data
+            document.querySelectorAll('.error-text').forEach(el => el.remove());
+            document.querySelectorAll('.error-border').forEach(el => el.classList.remove('error-border'));
+
+            let isValid = true;
+
+            // Check text fields
+            const requiredFields = ['fname', 'lname', 'email', 'message'];
+            requiredFields.forEach(id => {
+                const input = document.getElementById(id);
+                const value = input.value.trim();
+
+                if (!value) {
+                    showError(input, 'This field is required');
+                    isValid = false;
+                } else if (id === 'email' && !isValidEmail(value)) {
+                    showError(input, 'Please enter a valid email address');
+                    isValid = false;
+                }
+            });
+
+            // Check radio
+            const radios = document.querySelectorAll('input[name="query"]');
+            const isRadioChecked = [...radios].some(r => r.checked);
+            if (!isRadioChecked) {
+                showErrorCustom(radios[0].closest('.name-box'), 'Please select a query type');
+                isValid = false;
+            }
+
+            // Check checkbox
+            const checkbox = document.getElementById('conception');
+            if (!checkbox.checked) {
+                showErrorCustom(checkbox.closest('.conception-box'), 'To submit this form, please consent to being contacted');
+                isValid = false;
+            }
+
+            // Chack if email is valid
+            function isValidEmail(email) {
+                return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
+            }
+
+            //show error message under text fields and email
+            function showError(element, message = 'This field is required') {
+                let error = element.nextElementSibling;
+
+                if (error && error.classList.contains('error-text')) {
+                    error.textContent = message;
+                } else {
+                    error = document.createElement('span');
+                    error.className = 'error-text';
+                    error.textContent = message;
+                    element.insertAdjacentElement('afterend', error);
+                }
+
+                element.classList.add('error-border');
+            }
+
+            // Show message under (radio/checkbox)
+            function showErrorCustom(element, message) {
+                const existing = element.nextElementSibling;
+                if (existing && existing.classList.contains('error-text')) {
+                    existing.remove();
+                }
+
+                const error = document.createElement('div');
+                error.className = 'error-text';
+                error.textContent = message;
+                element.insertAdjacentElement('afterend', error);
+            }
+
+
+            // A massage about success sending
+            if (isValid) {
+                const alertBox = document.createElement('div');
+                alertBox.style.backgroundColor = '#1B3B36';
+                alertBox.style.color = 'white';
+                alertBox.style.padding = '16px 24px';
+                alertBox.style.borderRadius = '10px';
+                alertBox.style.display = 'flex';
+                alertBox.style.flexDirection = 'column';
+                alertBox.style.maxWidth = '400px';
+                alertBox.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.3)';
+                alertBox.style.fontFamily = 'sans-serif';
+                alertBox.style.position = 'fixed';
+                alertBox.style.top = '0';
+                alertBox.style.justifyContent = 'center';
+                alertBox.style.zIndex = '9999';
+
+                const container = document.createElement("div");
+                container.style.display = "flex";
+                container.style.alignItems = "center";
+
+                const img = document.createElement("img");
+                img.src = "./assets/images/icon-success-check.svg";
+                img.alt = "SuccessIcon";
+                img.style.marginRight = "10px";
+
+                const p1 = document.createElement("p");
+                p1.textContent = "Message Sent!";
+                p1.style.fontWeight = "bold";
+                p1.style.margin = "0";
+
+                const p2 = document.createElement("p");
+                p2.textContent = "Thanks for completing the form. We'll be in touch soon!";
+                p2.style.margin = "8px 0 0 28px";
+                p2.style.fontSize = "14px";
+                p2.style.color = "#D1E7DD";
+
+                container.appendChild(img);
+                container.appendChild(p1);
+                alertBox.appendChild(container);
+                alertBox.appendChild(p2);
+
+                document.body.appendChild(alertBox);
+
+                setTimeout(() => {
+                    alertBox.remove();
+                }, 5000);
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
