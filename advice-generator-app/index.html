@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Karla:ital,wght@0,200..800;1,200..800&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Ultra&display=swap"
+        rel="stylesheet">
+
+    <!--Tailwind CSS-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Open Sans', 'sans-serif'],
+                        redHat: ['Red Hat Text', 'sans-serif']
+                    },
+                }
+            }
+        }
+    </script>
+
+    <link rel="icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <title>Advice generator app</title>
+</head>
+
+<body class="relative text-center min-h-screen bg-[hsl(218,23%,16%)]">
+    <div
+        class="absolute top-1/3 left-1/2 transform -translate-x-1/2 flex flex-col items-center w-full sm:w-[400px] mx-auto p-6 pt-10 top-1/2 rounded-xl bg-[hsl(217,19%,24%)] text-white shadow-lg">
+
+        <p class="text-xs font-sans font-bold text-[hsl(150,100%,66%)] tracking-[0.3em] mb-4 uppercase">
+            Advice #<span id="advice-id">...</span>
+        </p>
+
+        <p id="advice-text" class="text-xl font-sans font-bold mb-6 text-[hsl(193,38%,86%)]">
+            Click the button to generate advice.
+        </p>
+
+        <picture class="mb-8">
+            <source srcset="./images/pattern-divider-mobile.svg" media="(max-width: 375px)">
+            <img src="./images/pattern-divider-desktop.svg" alt="devider" />
+        </picture>
+
+        <button onclick="getAdvice()"
+            class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-[hsl(150,100%,66%)] hover:shadow-[0_0_25px_hsl(150,100%,66%)] rounded-full flex items-center justify-center transition">
+            <img src="./images/icon-dice.svg" alt="dice" class="w-6 h-6">
+        </button>
+    </div>
+
+    <script>
+        async function getAdvice() {
+            const res = await fetch('https://api.adviceslip.com/advice', { cache: 'no-cache' });
+            const data = await res.json();
+
+            document.getElementById('advice-id').innerText = data.slip.id;
+            document.getElementById('advice-text').innerText = `"${data.slip.advice}"`;
+        }
+    </script>
+</body>
+
+</html>
