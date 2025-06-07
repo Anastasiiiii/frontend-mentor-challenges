@@ -1,0 +1,147 @@
+.menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    margin: 10px 10vw;
+    background-color: var(--white);
+    font-family: var(--font-family-base);
+}
+
+.menu::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--light-grayish-blue);
+}
+
+.menu__logo {
+    height: 20px;
+}
+
+.menu__links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu__item {
+    position: relative;
+}
+
+.menu__item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -21px;
+    width: 100%;
+    height: 3px;
+    background-color: var(--orange);
+    transform: scaleX(0);
+    z-index: 1;
+    transform-origin: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.menu__item:hover::after {
+    transform: scaleX(1);
+}
+
+.menu__link {
+    position: relative;
+    color: var(--dark-grayish-blue);
+    text-decoration: none;
+    padding: 10px 0;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.menu__link:hover {
+    color: black;
+}
+
+.menu__user-side {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu__cart {
+    width: 20px;
+    cursor: pointer;
+}
+
+.menu__avatar {
+    width: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.2s ease;
+}
+
+.menu__avatar:hover {
+    border-color: var(--orange);
+}
+
+.menu__burger {
+    display: none;
+    cursor: pointer;
+}
+
+.menu__mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 70vw;
+    background: var(--white);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.menu__mobile--open {
+    transform: translateX(0);
+}
+
+.menu__close {
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.menu__mobile-links {
+    list-style: none;
+    padding: 0;
+}
+
+.menu__mobile-links li {
+    margin: 20px 0;
+}
+
+.menu__mobile-links a {
+    text-decoration: none;
+    color: var(--very-dark-blue);
+    font-family: var(--font-family-base);
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        padding: 20px 0;
+        margin: 10px 3vw;
+    }
+    .menu__links {
+        display: none;
+    }
+
+    .menu__burger {
+        display: block;
+    }
+}

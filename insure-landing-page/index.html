@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Insure landing page</title>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <!--Menu-->
+            <div class="nav-wrapper">
+                <div class="logo-burger-container">
+                    <div class="logo"><img src="./images/logo.svg" alt="logo" /></div>
+                    <div class="burger" id="burger"><img src="./images/icon-hamburger.svg" alt="burgerIcon" /></div>
+                </div>
+                
+                <nav class="menu-container" id="nav">
+                    <ul>
+                        <li><a href="#">How we work</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">View plans</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+    <section>
+
+    </section>
+    <footer>
+
+    </footer>
+    <script>
+        const burger = document.getElementById("burger");
+        const nav = document.getElementById("nav");
+
+        burger.addEventListener("click", () => {
+            nav.classList.toggle("active");
+
+            const icon = burger.querySelector("img");
+            const isOpen = nav.classList.contains("active");
+
+            icon.src = isOpen
+                ? "./images/icon-close.svg"
+                : "./images/icon-hamburger.svg";
+        });
+    </script>
+</body>
+
+</html>
