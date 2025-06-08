@@ -1,6 +1,6 @@
 import './App.css';
+import MainBlock from './components/MainBlock';
 import Menu from './components/Menu';
-import ProductGallery from './components/ProductGallery';
 
 function App() {
   return (
@@ -8,8 +8,8 @@ function App() {
       <menu>
         <Menu />
       </menu>
-      <section>
-        <ProductGallery />
+      <section className='main-section'>
+        <MainBlock />
       </section>
     </div>
   );

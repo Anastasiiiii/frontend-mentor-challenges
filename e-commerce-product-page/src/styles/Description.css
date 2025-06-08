@@ -1,0 +1,120 @@
+.description {
+    width: 25vw;
+    font-family: var(--font-family-base);
+}
+
+.description__logo {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: var(--dark-grayish-blue);
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.description__header {
+    font-size: 40px;
+    line-height: 1.1;
+    margin-top: 15px;
+}
+
+.description__paragraph {
+    color: var(--dark-grayish-blue);
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.description__price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.description__main-price {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.description__sale {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.description__prev-price {
+    color: gray;
+    text-decoration: line-through;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: -10px;
+}
+
+.description__add-to-cart {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.description__counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--light-grayish-blue);
+    border-radius: 10px;
+    padding: 10px 15px;
+    min-width: 120px;
+    font-weight: 600;
+    font-size: 16px;
+    gap: 10px;
+}
+
+.description__counter button {
+    background: none;
+    border: none;
+    color: var(--orange);
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+.description__counter button:hover {
+    transform: scale(1.1);
+}
+
+.description__counter span {
+    flex-grow: 1;
+    text-align: center;
+    color: var(--black);
+    font-size: 18px;
+}
+
+.description__cart-button {
+    width: 100%;
+    background-color: var(--orange);
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14 px;
+    color: var(--black);
+    transition: background-color 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-button__content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cart-button__svg path {
+    fill: var(--black);
+}
