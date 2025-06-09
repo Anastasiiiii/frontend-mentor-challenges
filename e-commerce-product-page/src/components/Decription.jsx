@@ -3,7 +3,7 @@ import { ReactComponent as CartIcon } from "../images/icon-cart.svg";
 import "../styles/Formulas.css";
 import "../styles/Description.css";
 
-const Description = () => {
+const Description = ({ addToCart }) => {
     const [count, setCount] = useState(0);
 
     const increase = () => {
@@ -16,6 +16,11 @@ const Description = () => {
         }
     };
 
+    const handleAdd = () => {
+        addToCart(count);
+        setCount(0);
+    }
+
     return (
         <div className="description">
             <h5 className="description__logo">sneaker company</h5>
@@ -24,11 +29,13 @@ const Description = () => {
                 These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
             </p>
 
-            <div className="description__price">
-                <h2 className="description__main-price">$125.00</h2>
-                <p className="description__sale">50%</p>
+            <div className="description__all-prices">
+                <div className="description__price">
+                    <h2 className="description__main-price">$125.00</h2>
+                    <p className="description__sale">50%</p>
+                </div>
+                <p className="description__prev-price">$250.00</p>
             </div>
-            <p className="description__prev-price">$250.00</p>
 
             <div className="description__add-to-cart">
                 <div className="description__counter">
@@ -37,7 +44,7 @@ const Description = () => {
                     <button onClick={increase}>+</button>
                 </div>
 
-                <button className="description__cart-button">
+                <button className="description__cart-button" onClick={handleAdd}>
                     <span className="cart-button__content">
                         <CartIcon className="cart-button__svg" />
                         Add to cart

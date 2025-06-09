@@ -135,7 +135,7 @@
 @media (max-width: 768px) {
     .menu {
         padding: 20px 0;
-        margin: 10px 3vw;
+        margin: 0 3vw;
     }
     .menu__links {
         display: none;

@@ -5,3 +5,10 @@
     align-items: center;
     margin-top: 5vw;
 }
+
+@media (max-width: 768px) {
+    .main-block {
+        flex-direction: column;
+        margin-top: 0;
+    }
+}

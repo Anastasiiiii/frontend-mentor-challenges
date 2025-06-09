@@ -7,7 +7,7 @@ import avatarImg from "../images/image-avatar.png";
 import burgerIcon from "../images/icon-menu.svg";
 import closeIcon from "../images/icon-close.svg";
 
-const Menu = () => {
+const Menu = ({ toggleCart }) => {
     const [isMobileOpen, setIsMobileOpen] = useState(false);
 
     return (
@@ -33,7 +33,7 @@ const Menu = () => {
                 </ul>
 
                 <div className="menu__user-side">
-                    <img src={cartIcon} className="menu__cart" alt="cart" />
+                    <img src={cartIcon} className="menu__cart" onClick={toggleCart} alt="cart" />
                     <img src={avatarImg} className="menu__avatar" alt="avatar" />
                 </div>
             </div>

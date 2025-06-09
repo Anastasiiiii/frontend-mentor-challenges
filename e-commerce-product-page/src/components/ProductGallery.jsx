@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/Formulas.css";
 import "../styles/ProductGallery.css";
 
-import { ReactComponent as CloseIcon} from "../images/icon-close.svg";
+import { ReactComponent as CloseIcon } from "../images/icon-close.svg";
 import { ReactComponent as NextIcon } from "../images/icon-next.svg";
 import { ReactComponent as PrevIcon } from "../images/icon-previous.svg";
 
@@ -38,6 +38,13 @@ const ProductGallery = () => {
                     <img src={imageSet[activeIndex].full} alt="Selected product" className="gallery__main-image" />
                 </div>
 
+                {window.innerWidth <= 768 && (
+                    <>
+                        <PrevIcon onClick={prevImage} className="gallery__prev" />
+                        <NextIcon onClick={nextImage} className="gallery__next" />
+                    </>
+                )}
+
                 <div className="gallery__thumbnails">
                     {imageSet.map((img, index) => (
                         <img
@@ -66,7 +73,7 @@ const ProductGallery = () => {
                             className="modal__image"
                         />
 
-                        <NextIcon onClick={nextImage}  className="modal__next" alt="next image" />
+                        <NextIcon onClick={nextImage} className="modal__next" alt="next image" />
 
                         <div className="modal__thumbnails">
                             {imageSet.map((img, index) => (

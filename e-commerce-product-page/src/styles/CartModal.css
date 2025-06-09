@@ -1,0 +1,110 @@
+.cart-modal {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    width: 360px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+    font-family: var(--font-family-base);
+}
+
+.cart-modal__header {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    position: relative; 
+}
+
+.cart-modal__header::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    bottom: 25px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--light-grayish-blue);
+}
+
+.cart-modal__empty-message {
+    text-align: center;
+    color: var(--dark-grayish-blue);
+    padding: 40px 0;
+}
+
+.cart-modal__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-modal__item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart-modal__thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.cart-modal__item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-modal__item-title {
+    font-size: 14px;
+    color: var(--dark-grayish-blue);
+    margin-bottom: 5px;
+}
+
+.cart-modal__item-price {
+    font-size: 14px;
+    color: var(--dark-grayish-blue);
+}
+
+.cart-modal__delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-modal__delete-btn svg path {
+    fill: var(--grayish-blue);
+    transition: fill 0.2s ease;
+}
+
+.cart-modal__delete-btn:hover svg path {
+    fill: var(--orange);
+}
+
+.cart-modal__checkout {
+    margin-top: 10px;
+    padding: 15px;
+    width: 100%;
+    background-color: var(--orange);
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.cart-modal__checkout:hover {
+    background-color: var(--orange);
+}
+
+@media (max-width: 768px) {
+    .cart-modal{
+        width: 340px;
+        right: 5px;
+    }
+}

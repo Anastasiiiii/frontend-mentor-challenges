@@ -3,11 +3,11 @@ import Description from '../components/Decription';
 import ProductGallery from '../components/ProductGallery';
 import "../styles/MainBlock.css";
 
-const MainBlock = () => {
+const MainBlock = ({ addToCart }) => {
     return (
         <div className="main-block">
             <ProductGallery />
-            <Description />
+            <Description addToCart={addToCart} />
         </div>
     )
 }
