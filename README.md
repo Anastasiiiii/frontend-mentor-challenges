@@ -10,5 +10,5 @@ This repository contains my solutions to various challenges from [Frontend Mento
 | Contact Form Challenge   | [View](https://anastasiiiii.github.io/frontend-mentor-challenges/contact-form/)| [Source](https://github.com/Anastasiiiii/frontend-mentor-challenges/tree/main/contact-form)|
 | Product Preview Card Component | [View](https://anastasiiiii.github.io/frontend-mentor-challenges/product-preview-card-component/) | [Source](https://github.com/Anastasiiiii/frontend-mentor-challenges/tree/main/product-preview-card-component)|
 | Advice Generator App     | [View](https://anastasiiiii.github.io/frontend-mentor-challenges/advice-generator-app/) | [Source](https://github.com/Anastasiiiii/frontend-mentor-challenges/tree/main/advice-generator-app) |
-
+| E-commerce product page  | [View](https://anastasiiiii.github.io/frontend-mentor-challenges/e-commerce-product-page/dist/) | [Source](https://github.com/Anastasiiiii/frontend-mentor-challenges/tree/main/e-commerce-product-page) |
 
